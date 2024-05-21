@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preview {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+}
+.preview img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.thumbnails img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .thumbnails img {
+        width: 70px;
+        height: 70px;
+    }
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Food Viewer</h1>
+        <div class="preview">
+            <img id="largeImage" src="./images/promo-3.png" alt="Large Preview">
+        </div>
+        <div class="thumbnails">
+            <img src="./images/banner-1.jpg" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/food-menu-1.png" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/food-menu-2.png" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/food-menu-3.png" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/food-menu-4.png" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/food-menu-5.png" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/food-menu-6.png" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/promo-1.png" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/promo-2.png" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/promo-3.png" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/promo-4.png" class="thumbnail" onclick="loadImg(this)" alt="">
+            <img src="./images/promo-5.png" class="thumbnail" onclick="loadImg(this)" alt="">
+        </div>
+    </div>
+
+
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
